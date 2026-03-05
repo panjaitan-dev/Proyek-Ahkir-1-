@@ -1,2 +1,6 @@
-# Proyek-Ahkir-1-
-Proyek ini dikembangkan sebagai implementasi nyata dari konsep rekayasa perangkat lunak dalam membangun sistem yang terstruktur, terdokumentasi, dan sesuai dengan kebutuhan pengguna.
+# Welcome to GitHub Desktop!
+
+This is your README. READMEs are where you can communicate what your project is and how to use it.
+
+Write your name on line 6, save it, and then head back to GitHub Desktop.
+Ferdiyanto
