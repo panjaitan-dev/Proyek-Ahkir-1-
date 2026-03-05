@@ -1,0 +1,308 @@
+/* =====================================================
+   RESET & BASE STYLE (GLOBAL)
+===================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #dc2626;
+  --primary-dark: #b91c1c;
+  --secondary-color: #1f2937;
+  --secondary-dark: #111827;
+  --accent-color: #d97706;
+  --accent-light: #fbbf24;
+  --text-dark: #1f2937;
+  --text-light: #4b5563;
+  --background-light: #f8fafc;
+  --background-white: #ffffff;
+  --border-color: #e5e7eb;
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.08);
+  --shadow: 0 4px 10px rgba(0,0,0,0.12);
+  --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--background-white);
+  color: var(--text-dark);
+  line-height: 1.7;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+.main-header {
+  background: linear-gradient(135deg, var(--secondary-dark), var(--secondary-color));
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo-main {
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.logo-accent {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--accent-light);
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  background: var(--primary-color);
+}
+
+/* =====================================================
+   HOME / HERO
+===================================================== */
+.hero-section {
+  min-height: 85vh;
+  background:
+    linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.6)),
+    url('nikolas.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  max-width: 650px;
+  margin: auto;
+  opacity: 0.9;
+}
+
+.cta-button {
+  margin-top: 30px;
+  padding: 15px 45px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: 0.3s;
+}
+
+.cta-button:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* =====================================================
+   MENU
+===================================================== */
+.featured-menu {
+  background: var(--background-light);
+  padding: 80px 0;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.featured-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: 0.3s;
+}
+
+.featured-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.food-name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 15px;
+}
+
+.order-button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  background: linear-gradient(to right, var(--secondary-color), var(--secondary-dark));
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.order-button:hover {
+  background: linear-gradient(to right, var(--primary-color), var(--primary-dark));
+}
+
+/* =====================================================
+   ABOUT
+===================================================== */
+.about-section {
+  background: var(--background-white);
+  padding: 80px 0;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-text h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.mission-list li {
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.mission-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+}
+
+/* =====================================================
+   CONTACT
+===================================================== */
+.contact-section {
+  background: var(--background-light);
+  padding: 80px 0;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.contact-form {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.submit-button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-button:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+.main-footer {
+  background: linear-gradient(135deg, var(--secondary-dark), #000);
+  color: white;
+  padding: 60px 0 20px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2.5rem;
+}
+
+.footer-links a {
+  color: #ddd;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--accent-light);
+}
+
+/* =====================================================
+   UTILITIES
+===================================================== */
+.floating-button {
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  box-shadow: var(--shadow-lg);
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 768px) {
+  .about-content,
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-title {
+    font-size: 2.4rem;
+  }
+
+  .nav-list {
+    gap: 1rem;
+  }
+}
